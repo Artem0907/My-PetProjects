@@ -12,5 +12,7 @@ __pycache__/
 logs/
 
 # my config
+function/old_turbo_print/
 function/turbo_print/
+function/new_turbo_print/
 mypy_config.toml
