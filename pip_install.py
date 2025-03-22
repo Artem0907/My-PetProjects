@@ -3,7 +3,8 @@ from sys import executable as python_version, argv as cmd_args
 from pathlib import Path
 from asyncio import create_subprocess_exec, run as aiorun
 from asyncio.subprocess import PIPE
-from typing import List, Optional
+from typing import List
+from argparse import ArgumentParser
 import aiofiles
 
 __all__ = ["SyncPackageManager", "AsyncPackageManager"]
@@ -263,34 +264,29 @@ async def main() -> None:
     """
     Основная функция для обработки аргументов командной строки.
     """
-    args_name = ["help", "sync", "async"]
-    args = []
-    for arg_name in args_name:
-        args += [f"-{arg_name[0]}", f"--{arg_name}"]
-
-    if len(cmd_args) < 2 or cmd_args[1].lower() not in args:
-        print(
-            'Неверные аргументы для файла, для подробностей введите "-h" или "--help"'
-        )
-        exit(404)
-
-    if len(cmd_args) > 3 and cmd_args[2].lower() == "-r" and Path(cmd_args[3]).exists():
-        requirements_file_path = Path(cmd_args[3])
-    else:
-        requirements_file_path = Path("./requirements.txt")
-
-    match cmd_args[1].lower():
-        case "-h" | "--help":
-            print(
-                "Использование: python package_manager.py [-s | --sync] [-a | --async] [-r <path>]"
-            )
-            exit(0)
-        case "-s" | "--sync":
-            manager = SyncPackageManager(requirements_file_path)
-        case "-a" | "--async":
-            manager = AsyncPackageManager(requirements_file_path)
-        case _:
-            exit(385)
+    args = ArgumentParser()
+    args.add_argument(
+        "-m",
+        "--mode",
+        choices=["sync", "async"],
+        default="sync",
+        help="Режим работы (синхронный или асинхронный)",
+    )
+    args.add_argument(
+        "-r",
+        "--requirements",
+        default="./requirements.txt",
+        help="Путь к файлу requirements.txt с библиотеками",
+    )
+    args = args.parse_args()
+    requirements_path = Path(
+        args.requirements if args.requirements else "./requirements.txt"
+    )
+    manager = (
+        SyncPackageManager(requirements_path)
+        if args.mode == "sync"
+        else AsyncPackageManager(requirements_path)
+    )
 
     try:
         print("Начало установки библиотек...")

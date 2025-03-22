@@ -1,124 +1,101 @@
-from time import time
-from multiprocessing import Pool as mp_Pool
-from threading import Thread
-from asyncio import get_event_loop
-from functools import cache
+import time
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+import asyncio
+from typing import List, Tuple
 
 
-# Функция для вычисления n-го числа Фибоначчи
+# --------------------------------------------------
+# Оптимизированная версия функции Фибоначчи
+# --------------------------------------------------
 def fibonacci(n: int) -> int:
-    if n <= 1:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    """Итеративная версия для избежания recursion limit и stack overflow"""
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
 
 
-# Многопроцессный подход
-def run_multiprocessing(n, num_processes):
-    start_time = time()
-    with mp_Pool(processes=num_processes) as pool:
-        results = pool.apply(fibonacci, (n,))
-    end_time = time()
-    return end_time - start_time
+# --------------------------------------------------
+# Многопроцессная обработка (для CPU-bound задач)
+# --------------------------------------------------
+def run_multiprocessing(n: int, workers: int) -> float:
+    start = time.perf_counter()
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        # Распределяем задания между процессами
+        futures = [executor.submit(fibonacci, n) for _ in range(workers)]
+        results = [f.result() for f in futures]
+    return time.perf_counter() - start
 
 
-# Многопоточный подход
-def run_multithreading(n, num_threads):
-    start_time = time()
-    threads = []
-    for thread_id in range(num_threads):
-        threads.append(Thread(target=fibonacci, args=(n,)))
-    for thread_id in threads:
-        thread_id.start()
-    for thread_id in threads:
-        thread_id.join()
-    end_time = time()
-    return end_time - start_time
+# --------------------------------------------------
+# Многопоточная обработка (для I/O-bound задач)
+# --------------------------------------------------
+def run_multithreading(n: int, workers: int) -> float:
+    start = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(fibonacci, n) for _ in range(workers)]
+        results = [f.result() for f in futures]
+    return time.perf_counter() - start
 
 
-# Стандартный подход
-def run_standard(n):
-    start_time = time()
-    results = fibonacci(n)
-    end_time = time()
-    return end_time - start_time
+# --------------------------------------------------
+# Синхронная версия (базовый уровень)
+# --------------------------------------------------
+def run_sequential(n: int, workers: int) -> float:
+    start = time.perf_counter()
+    results = [fibonacci(n) for _ in range(workers)]
+    return time.perf_counter() - start
 
 
-# Асинхронный подход
-async def async_fibonacci(n: int) -> int:
-    if n <= 1:
-        return n
-    return (await async_fibonacci(n - 1)) + (await async_fibonacci(n - 2))
+# --------------------------------------------------
+# Асинхронная версия (для I/O-bound с async/await)
+# --------------------------------------------------
+async def async_worker(n: int) -> int:
+    return fibonacci(n)
 
 
-async def run_asyncio(n):
-    start_time = time()
-    results = await async_fibonacci(n)
-    end_time = time()
-    return end_time - start_time
+async def run_async(n: int, workers: int) -> float:
+    start = time.perf_counter()
+    tasks = [async_worker(n) for _ in range(workers)]
+    await asyncio.gather(*tasks)
+    return time.perf_counter() - start
 
 
-# Кэшированный подход
-def run_cached(n):
-    start_time = time()
-    cache(fibonacci)(n)
-    end_time = time()
-    return end_time - start_time
+# --------------------------------------------------
+# Анализ и визуализация результатов
+# --------------------------------------------------
+def analyze_results(results: List[Tuple[str, float]]):
+    max_name_len = max(len(name) for name, _ in results)
+    print("\nРезультаты производительности:")
+    print("-" * (max_name_len + 13))
+
+    for name, time in sorted(results, key=lambda x: x[1]):
+        print(f"{name.rjust(max_name_len)} | {time:.4f} сек")
 
 
-# Основная функция для запуска всех подходов
-def main(iters, n, num_processes, num_threads):
-    async_loop = get_event_loop()
-    print("Количество повторений:", iters)
-    print("Количество вычислений:", n)
-
-    mp_time = []
-    mt_time = []
-    sd_time = []
-    ay_time = []
-    ch_time = []
-
-    for i in range(iters):
-        # Многопроцессный подход
-        mp_time.append(run_multiprocessing(n, num_processes))
-
-        # Многопоточный подход
-        mt_time.append(run_multithreading(n, num_threads))
-
-        # Стандартный подход
-        sd_time.append(run_standard(n))
-
-        # Асинхронный подход
-        ay_time.append(async_loop.run_until_complete(run_asyncio(n)))
-
-        # Кэшированный подход
-        ch_time.append(run_cached(n))
-
-    approach = [
-        ("multiprocessing", sum(mp_time) / iters),
-        ("threading", sum(mt_time) / iters),
-        ("standard", sum(sd_time) / iters),
-        ("asyncio", sum(ay_time) / iters),
-        ("cache", sum(ch_time) / iters),
-    ]
-    max_len = max(map(lambda el: len(el[0]), approach))
-
-    print(
-        "Время выполнения",
-        *map(
-            lambda el: f"    {' '*(max_len-len(el[0]))}{el[0]}:  {el[1]:.2f}",
-            sorted(
-                approach,
-                key=lambda _t: _t[1],
-            ),
-        ),
-        sep="\n",
-    )
-
-
+# --------------------------------------------------
+# Основной блок
+# --------------------------------------------------
 if __name__ == "__main__":
-    iters = 10  # Количество повторений
-    n = 30  # Количество вычислений
-    num_processes = 8  # Количество процессов
-    num_threads = 8  # Количество потоков
+    # Конфигурация теста
+    N = 100_000  # Величина вычислений
+    WORKERS = 8  # Количество параллельных задач
+    TRIALS = 10  # Количество повторов
 
-    main(iters, n, num_processes, num_threads)
+    # Тестируемые подходы
+    approaches = {
+        "Multiprocessing": run_multiprocessing,
+        "Multithreading": run_multithreading,
+        "Sequential": run_sequential,
+        "Async": lambda n, w: asyncio.run(run_async(n, w)),
+    }
+
+    # Сбор метрик
+    metrics = []
+    for name, func in approaches.items():
+        total_time = 0.0
+        for _ in range(TRIALS):
+            total_time += func(N, WORKERS)
+        metrics.append((name, total_time / TRIALS))
+
+    analyze_results(metrics)

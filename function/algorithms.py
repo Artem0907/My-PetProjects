@@ -6,19 +6,52 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def sort_json(json_data):
-    if isinstance(json_data, (set, tuple, list)):
+from collections.abc import Iterable
+from typing import Any, Union
+
+def sort_json(data: Any) -> Any:
+    """
+    Recursively sorts JSON-like data structures including:
+    - Lists/Tuples/Sets: Attempt to sort elements, maintain original type
+    - Dictionaries: Sort by keys, recursively sort values
+    - Scalars: Return as-is
+
+    Preserves:
+    - Tuple → Tuple
+    - Set → List (sorted)
+    - List → List (sorted)
+    - Dict → Dict (sorted by keys)
+    """
+    
+    if isinstance(data, dict):
+        return {
+            key: sort_json(value) 
+            for key, value in sorted(data.items(), key=lambda x: str(x[0]))
+        }
+    
+    if isinstance(data, (set, list, tuple)):
         try:
-            json_data = sorted(json_data)
+            sorted_data = sorted(data, key=_safe_sort_key)
         except TypeError:
-            json_data = list(json_data)
-        for json_id, json_obj in enumerate(json_data):
-            json_data[json_id] = sort_json(json_obj)
-    elif isinstance(json_data, dict):
-        json_data = dict(sorted(json_data.items()))
-        for json_key, json_value in json_data.items():
-            json_data[json_key] = sort_json(json_value)
-    return json_data
+            sorted_data = list(data)
+        
+        processed = [sort_json(item) for item in sorted_data]
+        
+        # Preserve original container type
+        if isinstance(data, tuple):
+            return tuple(processed)
+        if isinstance(data, set):
+            return processed  # Set becomes sorted list
+        return processed
+    
+    return data
+
+def _safe_sort_key(item: Any) -> Union[Any, str]:
+    """Sort key with fallback for unhashable types"""
+    try:
+        return (str(type(item)), item)
+    except TypeError:
+        return str(item)
 
 
 def center(
