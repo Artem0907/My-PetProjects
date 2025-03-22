@@ -1,0 +1,19 @@
+# files
+.env
+data/!*.py
+data/*
+TempCodeFile.py
+
+# folders
+__pycache__/
+.mypy_cache/
+.ropeproject/
+.vscode/
+logs/
+
+# my config
+function/old_turbo_print/
+function/turbo_print/
+function/my_turbo_print/
+function/new_turbo_print/
+mypy_config.toml
