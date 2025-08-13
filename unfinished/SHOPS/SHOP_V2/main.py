@@ -33,6 +33,9 @@ class Main:
         self.running = True
 
         read_data_files(self)
+        create_frames(self)
+        create_widgets(self)
+        create_buttons(self)
 
         if self.employs_list_names == []:
             registration_window(self)

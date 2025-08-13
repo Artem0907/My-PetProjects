@@ -1,0 +1,3 @@
+API_KEY="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"
+MODEL_ID="deepseek/deepseek-r1"
+BASE_URL="https://openrouter.ai/api/v1"

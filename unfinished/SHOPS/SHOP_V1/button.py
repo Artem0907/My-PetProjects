@@ -20,3 +20,29 @@ def create_button(self) -> None:
         corner_radius=0,
         command=lambda: self.button_click(self.btn1),
     )
+    self.btn2 = CTk.CTkButton(
+        self.button_label,
+        width,
+        height,
+        text_color=self.background_button_text_color,
+        text=self.products[1][0],
+        font=CTk.CTkFont("Helvetica", 15),
+        bg_color=self.background_color,
+        fg_color=self.background_button_color,
+        hover_color=self.background_button_color,
+        corner_radius=0,
+        command=lambda: self.button_click(self.btn1),
+    )
+    self.btn3 = CTk.CTkButton(
+        self.button_label,
+        width,
+        height,
+        text_color=self.background_button_text_color,
+        text=self.products[2][0],
+        font=CTk.CTkFont("Helvetica", 15),
+        bg_color=self.background_color,
+        fg_color=self.background_button_color,
+        hover_color=self.background_button_color,
+        corner_radius=0,
+        command=lambda: self.button_click(self.btn1),
+    )

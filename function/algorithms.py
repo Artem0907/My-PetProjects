@@ -1,13 +1,11 @@
 import logging
-from typing import List, Tuple
+from typing import Any, Union
+
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
-from collections.abc import Iterable
-from typing import Any, Union
 
 def sort_json(data: Any) -> Any:
     """
@@ -22,29 +20,30 @@ def sort_json(data: Any) -> Any:
     - List → List (sorted)
     - Dict → Dict (sorted by keys)
     """
-    
+
     if isinstance(data, dict):
         return {
-            key: sort_json(value) 
+            key: sort_json(value)
             for key, value in sorted(data.items(), key=lambda x: str(x[0]))
         }
-    
+
     if isinstance(data, (set, list, tuple)):
         try:
             sorted_data = sorted(data, key=_safe_sort_key)
         except TypeError:
             sorted_data = list(data)
-        
+
         processed = [sort_json(item) for item in sorted_data]
-        
+
         # Preserve original container type
         if isinstance(data, tuple):
             return tuple(processed)
         if isinstance(data, set):
             return processed  # Set becomes sorted list
         return processed
-    
+
     return data
+
 
 def _safe_sort_key(item: Any) -> Union[Any, str]:
     """Sort key with fallback for unhashable types"""
@@ -137,7 +136,7 @@ def num_to_words(number: int) -> str:
     if number == 0:
         return "ноль рублей"
 
-    def get_block_words(n: int, is_feminine: bool) -> List[str]:
+    def get_block_words(n: int, is_feminine: bool) -> list[str]:
         """Возвращает текстовое представление блока из трех цифр."""
         words = []
         hundreds = n // 100
@@ -160,7 +159,7 @@ def num_to_words(number: int) -> str:
 
         return words
 
-    def get_ending(n: int, endings: List[str]) -> str:
+    def get_ending(n: int, endings: list[str]) -> str:
         """Возвращает правильное окончание для блока."""
         if 11 <= n % 100 <= 19:
             return endings[2]
@@ -171,7 +170,7 @@ def num_to_words(number: int) -> str:
             return endings[1]
         return endings[2]
 
-    result = []
+    result: list[str] = []
     remaining = number
 
     # Обрабатываем блоки от старших к младшим
@@ -235,6 +234,3 @@ def selection_sort(array: list[int]) -> list[int]:
         array[i] = min
         array[min_id] = temp
     return array
-
-
-print(num_to_words(76_534))

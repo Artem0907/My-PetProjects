@@ -1,0 +1,954 @@
+[
+    {
+        "name": "AE2 Things",
+        "url": "https://www.curseforge.com/projects/609977"
+    },
+    {
+        "name": "AE2WTLib",
+        "url": "https://www.curseforge.com/projects/459929"
+    },
+    {
+        "name": "Almanac",
+        "url": "https://www.curseforge.com/projects/1115285"
+    },
+    {
+        "name": "AmbientSounds",
+        "url": "https://www.curseforge.com/projects/254284"
+    },
+    {
+        "name": "Animation Overhaul",
+        "url": "https://www.curseforge.com/projects/1028436"
+    },
+    {
+        "name": "AppleSkin",
+        "url": "https://www.curseforge.com/projects/248787"
+    },
+    {
+        "name": "Applied Energistics 2",
+        "url": "https://www.curseforge.com/projects/223794"
+    },
+    {
+        "name": "Architectury",
+        "url": "https://www.curseforge.com/projects/419699"
+    },
+    {
+        "name": "BadOptimizations",
+        "url": "https://www.curseforge.com/projects/949555"
+    },
+    {
+        "name": "Balm",
+        "url": "https://www.curseforge.com/projects/531761"
+    },
+    {
+        "name": "Better Advancements",
+        "url": "https://www.curseforge.com/projects/272515"
+    },
+    {
+        "name": "Better Animations Collection",
+        "url": "https://www.curseforge.com/projects/323976"
+    },
+    {
+        "name": "Better Archeology",
+        "url": "https://www.curseforge.com/projects/835687"
+    },
+    {
+        "name": "Better Combat",
+        "url": "https://www.curseforge.com/projects/639842"
+    },
+    {
+        "name": "Better Mods Button",
+        "url": "https://www.curseforge.com/projects/541584"
+    },
+    {
+        "name": "Better Third Person",
+        "url": "https://www.curseforge.com/projects/435044"
+    },
+    {
+        "name": "Better village",
+        "url": "https://www.curseforge.com/projects/615352"
+    },
+    {
+        "name": "BetterF3",
+        "url": "https://www.curseforge.com/projects/401648"
+    },
+    {
+        "name": "Biomes O' Plenty",
+        "url": "https://www.curseforge.com/projects/220318"
+    },
+    {
+        "name": "Blur (Forge)",
+        "url": "https://www.curseforge.com/projects/823106"
+    },
+    {
+        "name": "Bookshelf",
+        "url": "https://www.curseforge.com/projects/228525"
+    },
+    {
+        "name": "Botania",
+        "url": "https://www.curseforge.com/projects/225643"
+    },
+    {
+        "name": "BuildPaste for Forge",
+        "url": "https://www.curseforge.com/projects/432036"
+    },
+    {
+        "name": "Building Gadgets 2",
+        "url": "https://www.curseforge.com/projects/298187"
+    },
+    {
+        "name": "Building Wands",
+        "url": "https://www.curseforge.com/projects/363392"
+    },
+    {
+        "name": "Caelus API",
+        "url": "https://www.curseforge.com/projects/308989"
+    },
+    {
+        "name": "CameraOverhaul",
+        "url": "https://www.curseforge.com/projects/423602"
+    },
+    {
+        "name": "Canary",
+        "url": "https://www.curseforge.com/projects/665658"
+    },
+    {
+        "name": "Chest Search Bar",
+        "url": "https://www.curseforge.com/projects/1050325"
+    },
+    {
+        "name": "ChickenChunks",
+        "url": "https://modrinth.com/mod/2JkvF271"
+    },
+    {
+        "name": "Chunk Loaders",
+        "url": "https://www.curseforge.com/projects/402924"
+    },
+    {
+        "name": "Chunky",
+        "url": "https://modrinth.com/mod/fALzjamp"
+    },
+    {
+        "name": "Cloth Config v10 API",
+        "url": "https://www.curseforge.com/projects/348521"
+    },
+    {
+        "name": "Clumps",
+        "url": "https://www.curseforge.com/projects/256717"
+    },
+    {
+        "name": "CoFH Core",
+        "url": "https://www.curseforge.com/projects/69162"
+    },
+    {
+        "name": "CodeChicken Lib",
+        "url": "https://www.curseforge.com/projects/242818"
+    },
+    {
+        "name": "Compress It!",
+        "url": "https://modrinth.com/mod/K44jnDZh"
+    },
+    {
+        "name": "Configured",
+        "url": "https://www.curseforge.com/projects/457570"
+    },
+    {
+        "name": "Construction Wand",
+        "url": "https://www.curseforge.com/projects/399558"
+    },
+    {
+        "name": "Corn Delight",
+        "url": "https://www.curseforge.com/projects/577805"
+    },
+    {
+        "name": "Crabber's Delight",
+        "url": "https://www.curseforge.com/projects/892827"
+    },
+    {
+        "name": "CraftingTweaks",
+        "url": "https://www.curseforge.com/projects/233071"
+    },
+    {
+        "name": "Create",
+        "url": "https://www.curseforge.com/projects/328085"
+    },
+    {
+        "name": "Create Crafts & Additions",
+        "url": "https://www.curseforge.com/projects/439890"
+    },
+    {
+        "name": "Create Enchantment Industry",
+        "url": "https://www.curseforge.com/projects/688768"
+    },
+    {
+        "name": "Create: Enchantable Machinery",
+        "url": "https://modrinth.com/mod/eqrvp4NK"
+    },
+    {
+        "name": "Create: Power Loader",
+        "url": "https://modrinth.com/mod/wPQ6GgFE"
+    },
+    {
+        "name": "Create: Structures",
+        "url": "https://modrinth.com/mod/IAnP4np7"
+    },
+    {
+        "name": "Create: The Factory Must Grow",
+        "url": "https://www.curseforge.com/projects/693815"
+    },
+    {
+        "name": "Create: Tweaked Controllers",
+        "url": "https://www.curseforge.com/projects/898849"
+    },
+    {
+        "name": "CreativeCore",
+        "url": "https://modrinth.com/mod/OsZiaDHq"
+    },
+    {
+        "name": "Creeper Overhaul",
+        "url": "https://www.curseforge.com/projects/561625"
+    },
+    {
+        "name": "Cristel Lib",
+        "url": "https://www.curseforge.com/projects/856996"
+    },
+    {
+        "name": "Cucumber Library",
+        "url": "https://www.curseforge.com/projects/272335"
+    },
+    {
+        "name": "Cupboard utilities",
+        "url": "https://www.curseforge.com/projects/326652"
+    },
+    {
+        "name": "Curios API",
+        "url": "https://www.curseforge.com/projects/309927"
+    },
+    {
+        "name": "Cut Through",
+        "url": "https://modrinth.com/mod/Dk6su9JN"
+    },
+    {
+        "name": "Delightful",
+        "url": "https://www.curseforge.com/projects/637529"
+    },
+    {
+        "name": "Draggable Lists",
+        "url": "https://modrinth.com/mod/aLcHfalx"
+    },
+    {
+        "name": "Durability Tooltip",
+        "url": "https://modrinth.com/mod/smUP7V3r"
+    },
+    {
+        "name": "Eating Animation",
+        "url": "https://www.curseforge.com/projects/570544"
+    },
+    {
+        "name": "Elytra Slot",
+        "url": "https://www.curseforge.com/projects/317716"
+    },
+    {
+        "name": "Embeddium",
+        "url": "https://www.curseforge.com/projects/908741"
+    },
+    {
+        "name": "Emojiful",
+        "url": "https://www.curseforge.com/projects/284324"
+    },
+    {
+        "name": "Emotecraft",
+        "url": "https://www.curseforge.com/projects/403422"
+    },
+    {
+        "name": "EnchantmentDescriptions",
+        "url": "https://www.curseforge.com/projects/250419"
+    },
+    {
+        "name": "End's Delight",
+        "url": "https://www.curseforge.com/projects/662675"
+    },
+    {
+        "name": "Ender IO",
+        "url": "https://modrinth.com/mod/49ZofO4f"
+    },
+    {
+        "name": "EnderStorage",
+        "url": "https://www.curseforge.com/projects/245174"
+    },
+    {
+        "name": "Extended Crafting",
+        "url": "https://www.curseforge.com/projects/268387"
+    },
+    {
+        "name": "FTB Essentials",
+        "url": "https://www.curseforge.com/projects/410811"
+    },
+    {
+        "name": "FTB Filter System",
+        "url": "https://www.curseforge.com/projects/943925"
+    },
+    {
+        "name": "FTB Library",
+        "url": "https://www.curseforge.com/projects/404465"
+    },
+    {
+        "name": "FTB Quests",
+        "url": "https://www.curseforge.com/projects/289412"
+    },
+    {
+        "name": "FTB Teams",
+        "url": "https://www.curseforge.com/projects/404468"
+    },
+    {
+        "name": "FTB Ultimine",
+        "url": "https://www.curseforge.com/projects/386134"
+    },
+    {
+        "name": "Farmer's Delight",
+        "url": "https://www.curseforge.com/projects/398521"
+    },
+    {
+        "name": "Fast Backups",
+        "url": "https://modrinth.com/mod/ZHKrK8Rp"
+    },
+    {
+        "name": "Fast IP Ping",
+        "url": "https://modrinth.com/mod/9mtu0sUO"
+    },
+    {
+        "name": "Fast Leaf Decay",
+        "url": "https://www.curseforge.com/projects/230976"
+    },
+    {
+        "name": "Fast Workbench",
+        "url": "https://www.curseforge.com/projects/288885"
+    },
+    {
+        "name": "FastBoot",
+        "url": "https://modrinth.com/mod/nRL5uFe0"
+    },
+    {
+        "name": "FastFurnace",
+        "url": "https://www.curseforge.com/projects/299540"
+    },
+    {
+        "name": "Fastload-Reforged",
+        "url": "https://modrinth.com/mod/kCpssoSb"
+    },
+    {
+        "name": "Ferrite Core",
+        "url": "https://www.curseforge.com/projects/429235"
+    },
+    {
+        "name": "Fluid Tank",
+        "url": "https://www.curseforge.com/projects/291006"
+    },
+    {
+        "name": "Forgematica",
+        "url": "https://www.curseforge.com/projects/912441"
+    },
+    {
+        "name": "Forgified Fabric API",
+        "url": "https://modrinth.com/mod/Aqlf1Shp"
+    },
+    {
+        "name": "Freecam",
+        "url": "https://www.curseforge.com/projects/557076"
+    },
+    {
+        "name": "Functional Storage",
+        "url": "https://www.curseforge.com/projects/556861"
+    },
+    {
+        "name": "Fusion",
+        "url": "https://www.curseforge.com/projects/854949"
+    },
+    {
+        "name": "Fzzy Config",
+        "url": "https://www.curseforge.com/projects/1005914"
+    },
+    {
+        "name": "GeckoLib 4",
+        "url": "https://www.curseforge.com/projects/388172"
+    },
+    {
+        "name": "GlitchCore",
+        "url": "https://www.curseforge.com/projects/955399"
+    },
+    {
+        "name": "Gpu memory leak fix",
+        "url": "https://www.curseforge.com/projects/882495"
+    },
+    {
+        "name": "Gravestone Mod",
+        "url": "https://www.curseforge.com/projects/238551"
+    },
+    {
+        "name": "GroovyModLoader (GML)",
+        "url": "https://www.curseforge.com/projects/661517"
+    },
+    {
+        "name": "GuideME",
+        "url": "https://www.curseforge.com/projects/1173950"
+    },
+    {
+        "name": "Highlighter",
+        "url": "https://modrinth.com/mod/cVNW5lr6"
+    },
+    {
+        "name": "Iceberg",
+        "url": "https://modrinth.com/mod/5faXoLqX"
+    },
+    {
+        "name": "ImmediatelyFast",
+        "url": "https://www.curseforge.com/projects/686911"
+    },
+    {
+        "name": "In-game NBTEdit Reborn",
+        "url": "https://modrinth.com/mod/Vr2eDeCw"
+    },
+    {
+        "name": "Industrial Foregoing",
+        "url": "https://www.curseforge.com/projects/266515"
+    },
+    {
+        "name": "Inventory HUD+",
+        "url": "https://www.curseforge.com/projects/357540"
+    },
+    {
+        "name": "Inventory Tweaks Refoxed",
+        "url": "https://www.curseforge.com/projects/976858"
+    },
+    {
+        "name": "Iron Chests",
+        "url": "https://www.curseforge.com/projects/228756"
+    },
+    {
+        "name": "Iron Furnaces",
+        "url": "https://www.curseforge.com/projects/237664"
+    },
+    {
+        "name": "Item Borders",
+        "url": "https://modrinth.com/mod/b1fMg6sH"
+    },
+    {
+        "name": "Item Filters",
+        "url": "https://modrinth.com/mod/1KLyhGRz"
+    },
+    {
+        "name": "ItemPhysic",
+        "url": "https://modrinth.com/mod/aT8BzaOj"
+    },
+    {
+        "name": "Jade",
+        "url": "https://www.curseforge.com/projects/324717"
+    },
+    {
+        "name": "Jade Addons",
+        "url": "https://www.curseforge.com/projects/583345"
+    },
+    {
+        "name": "Just Enough Items",
+        "url": "https://www.curseforge.com/projects/238222"
+    },
+    {
+        "name": "Just Enough Resources",
+        "url": "https://www.curseforge.com/projects/240630"
+    },
+    {
+        "name": "Konkrete",
+        "url": "https://www.curseforge.com/projects/410295"
+    },
+    {
+        "name": "Kotlin for Forge",
+        "url": "https://www.curseforge.com/projects/351264"
+    },
+    {
+        "name": "KubeJS",
+        "url": "https://www.curseforge.com/projects/238086"
+    },
+    {
+        "name": "KubeJS Addditions (Forge)",
+        "url": "https://www.curseforge.com/projects/594387"
+    },
+    {
+        "name": "KubeJS Botania",
+        "url": "https://www.curseforge.com/projects/618511"
+    },
+    {
+        "name": "KubeJS Create",
+        "url": "https://www.curseforge.com/projects/429371"
+    },
+    {
+        "name": "KubeJS Offline (Forge)",
+        "url": "https://www.curseforge.com/projects/641627"
+    },
+    {
+        "name": "KubeJS Thermal",
+        "url": "https://www.curseforge.com/projects/421694"
+    },
+    {
+        "name": "KubeJS-EnderIO",
+        "url": "https://www.curseforge.com/projects/910379"
+    },
+    {
+        "name": "KubeJS-EnderIO-Patched",
+        "url": "https://www.curseforge.com/projects/1018621"
+    },
+    {
+        "name": "KubeJSDelight",
+        "url": "https://www.curseforge.com/projects/864875"
+    },
+    {
+        "name": "KubeJSPowah",
+        "url": "https://www.curseforge.com/projects/838378"
+    },
+    {
+        "name": "Kubejs Extended Crafting",
+        "url": "https://www.curseforge.com/projects/955720"
+    },
+    {
+        "name": "Leaves Be Gone",
+        "url": "https://www.curseforge.com/projects/686435"
+    },
+    {
+        "name": "Legendary Tooltips",
+        "url": "https://www.curseforge.com/projects/532127"
+    },
+    {
+        "name": "Let Me Despawn",
+        "url": "https://www.curseforge.com/projects/663477"
+    },
+    {
+        "name": "Library ferret",
+        "url": "https://www.curseforge.com/projects/532727"
+    },
+    {
+        "name": "Limited Chunkloading",
+        "url": "https://www.curseforge.com/projects/456640"
+    },
+    {
+        "name": "LootJS",
+        "url": "https://www.curseforge.com/projects/570630"
+    },
+    {
+        "name": "MaFgLib",
+        "url": "https://www.curseforge.com/projects/910766"
+    },
+    {
+        "name": "McJtyLib",
+        "url": "https://www.curseforge.com/projects/233105"
+    },
+    {
+        "name": "Medieval Buildings",
+        "url": "https://www.curseforge.com/projects/924590"
+    },
+    {
+        "name": "Medieval Buildings [The End Edition]",
+        "url": "https://www.curseforge.com/projects/976817"
+    },
+    {
+        "name": "Mekanism",
+        "url": "https://www.curseforge.com/projects/268560"
+    },
+    {
+        "name": "Mekanism Pipez Fix",
+        "url": "https://www.curseforge.com/projects/1233861"
+    },
+    {
+        "name": "Mekanism: Additions",
+        "url": "https://www.curseforge.com/projects/345425"
+    },
+    {
+        "name": "Mekanism: Generators",
+        "url": "https://www.curseforge.com/projects/268566"
+    },
+    {
+        "name": "Mekanism: Tools",
+        "url": "https://www.curseforge.com/projects/268567"
+    },
+    {
+        "name": "Mekanism: Weapons",
+        "url": "https://www.curseforge.com/projects/929829"
+    },
+    {
+        "name": "Melody",
+        "url": "https://www.curseforge.com/projects/938643"
+    },
+    {
+        "name": "MidnightLib",
+        "url": "https://www.curseforge.com/projects/488090"
+    },
+    {
+        "name": "Mineblock's Repeated Utilities",
+        "url": "https://modrinth.com/mod/SNVQ2c0g"
+    },
+    {
+        "name": "Miner's Delight",
+        "url": "https://www.curseforge.com/projects/689630"
+    },
+    {
+        "name": "Model Gap Fix",
+        "url": "https://www.curseforge.com/projects/676136"
+    },
+    {
+        "name": "Modern UI",
+        "url": "https://www.curseforge.com/projects/352491"
+    },
+    {
+        "name": "ModernFix",
+        "url": "https://www.curseforge.com/projects/790626"
+    },
+    {
+        "name": "More Delight",
+        "url": "https://modrinth.com/mod/znHQQtuU"
+    },
+    {
+        "name": "Mouse Tweaks",
+        "url": "https://www.curseforge.com/projects/60089"
+    },
+    {
+        "name": "Mysterious Mountain Lib",
+        "url": "https://www.curseforge.com/projects/368098"
+    },
+    {
+        "name": "NBT Autocomplete",
+        "url": "https://modrinth.com/mod/UR0ocuEt"
+    },
+    {
+        "name": "NBT Copy",
+        "url": "https://modrinth.com/mod/XIIGRXeq"
+    },
+    {
+        "name": "Nature's Compass",
+        "url": "https://modrinth.com/mod/fPetb5Kh"
+    },
+    {
+        "name": "Necronomicon",
+        "url": "https://modrinth.com/mod/P1Kv5EAO"
+    },
+    {
+        "name": "Nether's Delight",
+        "url": "https://www.curseforge.com/projects/496394"
+    },
+    {
+        "name": "Notes",
+        "url": "https://www.curseforge.com/projects/256087"
+    },
+    {
+        "name": "Ocean's Delight",
+        "url": "https://www.curseforge.com/projects/841262"
+    },
+    {
+        "name": "Oculus",
+        "url": "https://www.curseforge.com/projects/581495"
+    },
+    {
+        "name": "Open Parties PvP Support",
+        "url": "https://modrinth.com/mod/xcparckV"
+    },
+    {
+        "name": "Open Parties and Claims",
+        "url": "https://modrinth.com/mod/gF3BGWvG"
+    },
+    {
+        "name": "Packet Fixer",
+        "url": "https://www.curseforge.com/projects/689467"
+    },
+    {
+        "name": "Patchouli",
+        "url": "https://www.curseforge.com/projects/306770"
+    },
+    {
+        "name": "Petrolpark's Library",
+        "url": "https://modrinth.com/mod/ik2WZkTZ"
+    },
+    {
+        "name": "Pipez",
+        "url": "https://www.curseforge.com/projects/443900"
+    },
+    {
+        "name": "Placebo",
+        "url": "https://www.curseforge.com/projects/283644"
+    },
+    {
+        "name": "Player Animator",
+        "url": "https://www.curseforge.com/projects/658587"
+    },
+    {
+        "name": "Powah",
+        "url": "https://www.curseforge.com/projects/633483"
+    },
+    {
+        "name": "Prism",
+        "url": "https://modrinth.com/mod/1OE8wbN0"
+    },
+    {
+        "name": "ProbeJS",
+        "url": "https://www.curseforge.com/projects/585406"
+    },
+    {
+        "name": "Puzzles Lib",
+        "url": "https://www.curseforge.com/projects/495476"
+    },
+    {
+        "name": "QuarryPlus",
+        "url": "https://www.curseforge.com/projects/282837"
+    },
+    {
+        "name": "RFToolsBase",
+        "url": "https://www.curseforge.com/projects/326041"
+    },
+    {
+        "name": "RFToolsBuilder",
+        "url": "https://www.curseforge.com/projects/347706"
+    },
+    {
+        "name": "Rechiseled",
+        "url": "https://www.curseforge.com/projects/558998"
+    },
+    {
+        "name": "Rechiseled: AE2",
+        "url": "https://www.curseforge.com/projects/987534"
+    },
+    {
+        "name": "Rechiseled: Create",
+        "url": "https://www.curseforge.com/projects/888624"
+    },
+    {
+        "name": "Remove Reloading Screen",
+        "url": "https://www.curseforge.com/projects/833233"
+    },
+    {
+        "name": "Resourceful Lib",
+        "url": "https://www.curseforge.com/projects/570073"
+    },
+    {
+        "name": "Resourcefulconfig",
+        "url": "https://www.curseforge.com/projects/714059"
+    },
+    {
+        "name": "Resourcify",
+        "url": "https://www.curseforge.com/projects/870076"
+    },
+    {
+        "name": "Rhino",
+        "url": "https://www.curseforge.com/projects/416294"
+    },
+    {
+        "name": "Scalable Cat's Force",
+        "url": "https://www.curseforge.com/projects/320926"
+    },
+    {
+        "name": "Searchables",
+        "url": "https://www.curseforge.com/projects/858542"
+    },
+    {
+        "name": "ShulkerBoxTooltip",
+        "url": "https://www.curseforge.com/projects/315811"
+    },
+    {
+        "name": "Sinytra Connector",
+        "url": "https://modrinth.com/mod/u58R1TMW"
+    },
+    {
+        "name": "Smooth Boot (Reloaded)",
+        "url": "https://www.curseforge.com/projects/633412"
+    },
+    {
+        "name": "Smoothchunk mod",
+        "url": "https://www.curseforge.com/projects/582327"
+    },
+    {
+        "name": "Sodium Dynamic Lights",
+        "url": "https://www.curseforge.com/projects/551736"
+    },
+    {
+        "name": "Sodium Options API",
+        "url": "https://www.curseforge.com/projects/1103431"
+    },
+    {
+        "name": "Sophisticated Backpacks",
+        "url": "https://www.curseforge.com/projects/422301"
+    },
+    {
+        "name": "Sophisticated Core",
+        "url": "https://www.curseforge.com/projects/618298"
+    },
+    {
+        "name": "Sophisticated Storage",
+        "url": "https://www.curseforge.com/projects/619320"
+    },
+    {
+        "name": "Sound Physics Remastered",
+        "url": "https://modrinth.com/mod/qyVF9oeo"
+    },
+    {
+        "name": "Sounds",
+        "url": "https://modrinth.com/mod/ZouiUX7t"
+    },
+    {
+        "name": "Steve's Realistic Sleep",
+        "url": "https://www.curseforge.com/projects/616330"
+    },
+    {
+        "name": "Storage Delight",
+        "url": "https://www.curseforge.com/projects/979761"
+    },
+    {
+        "name": "Storage Drawers",
+        "url": "https://www.curseforge.com/projects/223852"
+    },
+    {
+        "name": "SuperMartijn642's Config Library",
+        "url": "https://www.curseforge.com/projects/438332"
+    },
+    {
+        "name": "SuperMartijn642's Core Lib",
+        "url": "https://www.curseforge.com/projects/454372"
+    },
+    {
+        "name": "TerraBlender",
+        "url": "https://www.curseforge.com/projects/563928"
+    },
+    {
+        "name": "Terralith",
+        "url": "https://www.curseforge.com/projects/513688"
+    },
+    {
+        "name": "Thermal Expansion",
+        "url": "https://www.curseforge.com/projects/69163"
+    },
+    {
+        "name": "Thermal Foundation",
+        "url": "https://www.curseforge.com/projects/222880"
+    },
+    {
+        "name": "Titanium",
+        "url": "https://www.curseforge.com/projects/287342"
+    },
+    {
+        "name": "Towns and Towers",
+        "url": "https://www.curseforge.com/projects/626761"
+    },
+    {
+        "name": "TrashSlot",
+        "url": "https://www.curseforge.com/projects/235577"
+    },
+    {
+        "name": "Traveler's Backpack",
+        "url": "https://www.curseforge.com/projects/321117"
+    },
+    {
+        "name": "Vein Mining",
+        "url": "https://www.curseforge.com/projects/431611"
+    },
+    {
+        "name": "Visual Workbench",
+        "url": "https://www.curseforge.com/projects/500273"
+    },
+    {
+        "name": "Waystones",
+        "url": "https://www.curseforge.com/projects/245755"
+    },
+    {
+        "name": "WorldEdit",
+        "url": "https://www.curseforge.com/projects/225608"
+    },
+    {
+        "name": "WorldEdit Addon (1.5)",
+        "url": "https://www.curseforge.com/projects/940193"
+    },
+    {
+        "name": "WorldEdit Items",
+        "url": "https://www.curseforge.com/projects/584724"
+    },
+    {
+        "name": "Xaero's Minimap",
+        "url": "https://www.curseforge.com/projects/263420"
+    },
+    {
+        "name": "Xaero's World Map",
+        "url": "https://www.curseforge.com/projects/317780"
+    },
+    {
+        "name": "YUNG's API",
+        "url": "https://www.curseforge.com/projects/421850"
+    },
+    {
+        "name": "YUNG's Better Desert Temples",
+        "url": "https://www.curseforge.com/projects/631016"
+    },
+    {
+        "name": "YUNG's Better Dungeons",
+        "url": "https://www.curseforge.com/projects/510089"
+    },
+    {
+        "name": "YUNG's Better End Island",
+        "url": "https://www.curseforge.com/projects/901344"
+    },
+    {
+        "name": "YUNG's Better Jungle Temples",
+        "url": "https://www.curseforge.com/projects/897669"
+    },
+    {
+        "name": "YUNG's Better Mineshafts",
+        "url": "https://www.curseforge.com/projects/389665"
+    },
+    {
+        "name": "YUNG's Better Nether Fortresses",
+        "url": "https://www.curseforge.com/projects/817651"
+    },
+    {
+        "name": "YUNG's Better Ocean Monuments",
+        "url": "https://www.curseforge.com/projects/689238"
+    },
+    {
+        "name": "YUNG's Better Strongholds",
+        "url": "https://www.curseforge.com/projects/465575"
+    },
+    {
+        "name": "YUNG's Better Witch Huts",
+        "url": "https://www.curseforge.com/projects/631401"
+    },
+    {
+        "name": "YUNG's Bridges",
+        "url": "https://www.curseforge.com/projects/536660"
+    },
+    {
+        "name": "YUNG's Cave Biomes",
+        "url": "https://www.curseforge.com/projects/1111586"
+    },
+    {
+        "name": "YUNG's Extras",
+        "url": "https://www.curseforge.com/projects/480006"
+    },
+    {
+        "name": "YUNG's Menu Tweaks",
+        "url": "https://www.curseforge.com/projects/917285"
+    },
+    {
+        "name": "betterchunkloading mod",
+        "url": "https://www.curseforge.com/projects/899487"
+    },
+    {
+        "name": "chunksending mod",
+        "url": "https://www.curseforge.com/projects/831663"
+    },
+    {
+        "name": "fastasyncworldsave mod",
+        "url": "https://www.curseforge.com/projects/951499"
+    },
+    {
+        "name": "gravestonecurioscompat",
+        "url": "https://www.curseforge.com/projects/1139062"
+    },
+    {
+        "name": "libIPN",
+        "url": "https://www.curseforge.com/projects/679177"
+    },
+    {
+        "name": "medievalmusic mod",
+        "url": "https://www.curseforge.com/projects/521932"
+    }
+]

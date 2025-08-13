@@ -1,19 +1,48 @@
-# files
-.env
-data/!*.py
-data/*
-TempCodeFile.py
-
-# folders
+# cache
+## folders
 __pycache__/
+data/cache/
+data/temp/
+## files
+*.py[cod]
+*.temp.*
+
+# packaging
+## folders
 .mypy_cache/
 .ropeproject/
-.vscode/
-logs/
-
-# my config
-function/old_turbo_print/
-function/turbo_print/
-function/my_turbo_print/
-function/new_turbo_print/
+.ruff_cache/
+wheels/ 
+## files
+.ropeproject
+MANIFEST
 mypy_config.toml
+
+# environments
+## folders
+env/
+ENV/
+venv/
+## files
+.env
+.venv
+.settings
+
+# logs
+## folders
+logs/
+## files
+*.log
+
+# my
+## folders
+.vscode/
+function/turbo_print/
+## files
+TempCodeFile.py
+
+# uv
+## folders
+## files
+.python-version
+uv.lock

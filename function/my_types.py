@@ -8,9 +8,8 @@ class MyIterable(object):
 
     def __next__(self):
         if self._index < len(self.data):
-            value = self.data[self._index]
             self._index += 1
-            return value
+            return self.data[self._index]
         else:
             self._index = 0
             raise StopIteration
@@ -19,7 +18,7 @@ class MyIterable(object):
         return f"MyIterable({self.data})"
 
     def __repr__(self) -> str:
-        return f"<type MyIterable({self.data})>"
+        return f"<class MyIterable({self.data})>"
 
     def __len__(self) -> int:
         return len(self.data)

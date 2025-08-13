@@ -1,7 +1,7 @@
-import numpy as np
 import matplotlib.pyplot as plt
-
+import numpy as np
 import utils
+
 
 images, labels = utils.load_dataset()
 
@@ -10,15 +10,15 @@ weights_hidden_to_output = np.random.uniform(-0.5, 0.5, (10, 20))
 bias_input_to_hidden = np.zeros((20, 1))
 bias_hidden_to_output = np.zeros((10, 1))
 
-epochs = 3
+epochs = int(input("get epochs: "))
 e_loss = 0
 e_correct = 0
 learning_rate = 0.01
 
 for epoch in range(epochs):
-    print(f"\nEpoch №{epoch}")
+    print(f"\nEpoch №{epoch+1}")
 
-    for image, label in zip(images, labels):
+    for image, label in zip(images, labels, strict=False):
         image = np.reshape(image, (-1, 1))
         label = np.reshape(label, (-1, 1))
 
@@ -36,7 +36,9 @@ for epoch in range(epochs):
 
         # Backpropagation (output layer)
         delta_output = output - label
-        weights_hidden_to_output += -learning_rate * delta_output @ np.transpose(hidden)
+        weights_hidden_to_output += (
+            -learning_rate * delta_output @ np.transpose(hidden)
+        )
         bias_hidden_to_output += -learning_rate * delta_output
 
         # Backpropagation (hidden layer)
@@ -45,7 +47,9 @@ for epoch in range(epochs):
             @ delta_output
             * (hidden * (1 - hidden))
         )
-        weights_input_to_hidden += -learning_rate * delta_hidden @ np.transpose(image)
+        weights_input_to_hidden += (
+            -learning_rate * delta_hidden @ np.transpose(image)
+        )
         bias_input_to_hidden += -learning_rate * delta_hidden
 
         # DONE

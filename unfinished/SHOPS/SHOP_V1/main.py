@@ -1,9 +1,8 @@
 # Импорт библиотек и файлов
 from json import dump, load
-
-import customtkinter as CTk
 from tkinter.messagebox import Message
 
+import customtkinter as CTk
 from button import create_button
 from products import create_check_box
 
@@ -11,7 +10,9 @@ from products import create_check_box
 # главный класс
 class Main:
     # конструктор
-    def __init__(self, colors: tuple[str, str, str, str, str], path: str) -> None:
+    def __init__(
+        self, colors: tuple[str, str, str, str, str], path: str
+    ) -> None:
         # извлечь список продуктов из файла
         with open(f"{path}/products.json", "r", encoding="utf-8") as file:
             self.products = load(file)
@@ -59,12 +60,16 @@ class Main:
 
         # создание и настройка виджетов
         self.create_label()
-        self.price_data_list_width = float(self.price_list_label.cget("width")) / 17
-        self.price_data_list_height = float(self.price_list_label.cget("height")) / 15
+        self.price_data_list_width = (
+            float(self.price_list_label.cget("width")) / 17
+        )
+        self.price_data_list_height = (
+            float(self.price_list_label.cget("height")) / 15
+        )
         create_button(self)
         self.create_heading()
         # список кнопок
-        self.but: list[CTk.CTkButton] = [self.btn1]
+        self.but: list[CTk.CTkButton] = [self.btn1, self.btn2, self.btn3]
         # позиции кнопок
         self.position: list[tuple[int, int]] = [
             (c, r)
@@ -107,7 +112,8 @@ class Main:
             text="",
         )
         self.label_2.place(
-            x=((self.width - self.width / 2.5) - 5), y=((self.height / 1.5) + 10)
+            x=((self.width - self.width / 2.5) - 5),
+            y=((self.height / 1.5) + 10),
         )
 
         # создание и размещение рамки
@@ -173,8 +179,10 @@ class Main:
 
     # размещение кнопок списка продуктов
     def place_button(self) -> None:
-        for pos in range(1):
-            self.but[pos].place(x=self.position[pos][0], y=self.position[pos][1])
+        for pos in range(3):
+            self.but[pos].place(
+                x=self.position[pos][0], y=self.position[pos][1]
+            )
 
     # обработка кликов на кнопку
     def button_click(self, button: CTk.CTkButton) -> None:
@@ -354,7 +362,9 @@ class Main:
 
     #! NONE
     def none(self) -> None:
-        CTk.CTkButton(self.label_2, command=self.revenue_calculation).place(x=10, y=10)
+        CTk.CTkButton(self.label_2, command=self.revenue_calculation).place(
+            x=10, y=10
+        )
 
     # создание окна выручки
     def revenue_calculation(self):
@@ -443,13 +453,17 @@ if __name__ == "__main__":
 
     # запись финансов в файл
     with open(
-        "/".join(__file__.split("\\")[:-1]) + "/data.json", "w", encoding="utf-8"
+        "/".join(__file__.split("\\")[:-1]) + "/data.json",
+        "w",
+        encoding="utf-8",
     ) as file:
         dump(
             {
                 "доход": round(float(main.income), 2),
                 "расход": round(float(main.expenditure), 2),
-                "итог": round(float(float(main.income) - float(main.expenditure)), 2),
+                "итог": round(
+                    float(float(main.income) - float(main.expenditure)), 2
+                ),
                 "номер смены": main.shift_number,
                 "номер заказа": main.order_number,
                 "имя сотрудника": main.employs_name,

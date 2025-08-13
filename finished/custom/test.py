@@ -1,6 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
-
+import numpy as np
 import utils
 
 images, labels = utils.load_dataset()
@@ -49,8 +48,8 @@ exit(0)
 
 # Show results
 while True:
-    index = int(input("Enter a number (0 - 59999): "))
-    img = images[index]
+    index = int(input("Enter a number (1 - 60000): "))
+    img = images[index - 1]
     plt.imshow(img.reshape(28, 28), cmap="Greys")
 
     img.shape += (1,)
