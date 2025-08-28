@@ -1,0 +1,31 @@
+SHOP
+├── configure.ini
+├── main.py
+├── reader.py
+├── registration.py
+├── tree.txt
+├── writer.py
+├── json
+│   ├── data.json
+│   ├── favorites.json
+│   └── products.json
+└── languages
+    ├── en_US.txt
+    └── ru_RU.txt
+
+
+
+configure.ini
+main.py
+reader.py
+registration.py
+tree.txt
+writer.py
+
+json
+    data.json
+    favorites.json
+    products.json
+languages
+    en_US.txt
+    ru_RU.txt

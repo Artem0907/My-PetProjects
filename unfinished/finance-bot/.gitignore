@@ -1,0 +1,66 @@
+# Файлы и папки виртуальных окружений
+.venv/
+venv/
+env/
+ENV/
+
+# Кэши и артефакты Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.cache/
+
+# Сборочные артефакты/дистрибутивы
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Конфигурации и локальные настройки IDE/редакторов
+.vscode/
+.idea/
+.ropeproject/
+
+# Логи
+logs/
+*.log
+
+# Файлы окружения и секреты
+*.env
+!.env.example
+!*.example
+
+# Базы данных и дампы (SQLite/SQL)
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.sql
+*.sql-*
+
+# Файлы покрытия тестов
+.coverage
+coverage.xml
+htmlcov/
+
+# Системные файлы ОС
+.DS_Store
+Thumbs.db
+
+# Git/VC вспомогательные файлы (для вложенных репозиториев)
+.git/
+.git
+
+# Инструменты и менеджеры пакетов
+uv.lock
+.uv/
+poetry.lock
+poetry.toml

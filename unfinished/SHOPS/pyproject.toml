@@ -1,0 +1,10 @@
+[project]
+name = "shops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "customtkinter>=5.2.2",
+    "ujson>=5.10.0",
+]

@@ -1,0 +1,51 @@
+# cache
+## folders
+__pycache__/
+cache/
+temp/
+## files
+*.py[cod]
+*.temp.*
+
+# packaging
+## folders
+.cursor/
+.mypy_cache/
+.ropeproject/
+.ruff_cache/
+wheels/ 
+## files
+.ropeproject
+MANIFEST
+mypy_config.toml
+
+# environments
+## folders
+env/
+ENV/
+venv/
+## files
+*.env
+.venv
+*.settings
+!*.example
+
+# logs
+## folders
+logs/
+## files
+*.log
+
+# my
+## folders
+.vscode/
+function/turbo_print/
+unfinished/ai-finance-bot
+## files
+TempCodeFile.py
+
+# uv
+## folders
+## files
+.python-version
+uv.lock
