@@ -1,0 +1,30 @@
+context: {}
+filters:
+- name: CompositeFilter
+  parameters:
+    filters:
+    - !!python/object:src.turbo_print.filters.regex.RegexFilter
+      pattern: !!python/object/apply:re._compile
+      - ''
+      - 32
+      field: message
+      inverse: false
+    mode: all
+    inverse: false
+formatter:
+  colored: false
+  date_format: '%d/%m/%Y'
+  name: SimpleFormatter
+  simple_format: '[{date} {time}] {prefix} | {level_name}: {message}'
+  time_format: '%H:%M:%S'
+handlers:
+  StreamHandler:
+    formatter: null
+    level: NOTSET
+    stream: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+    colored: true
+level: INFO
+middlewares: []
+name: root
+parent: null
+propagate: true

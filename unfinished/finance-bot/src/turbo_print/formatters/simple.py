@@ -31,9 +31,13 @@ class SimpleFormatter(BaseFormatter):
     def __init__(
         self,
         simple_format: str = "[{date} {time}] {prefix} | {level_name}: {message}",
+        date_format: str = "%d/%m/%Y",
+        time_format: str = "%H:%M:%S",
         colored: bool = False,
     ):
         self.simple_format = simple_format
+        self.date_format = date_format
+        self.time_format = time_format
         self.colored = colored
 
     def format(self, record: LogRecord) -> str:
@@ -57,8 +61,8 @@ class SimpleFormatter(BaseFormatter):
             logger=record.logger,
             logger_name=record.logger.get_name(),
             prefix=record.logger.get_name(),
-            date=record.date_time.strftime("%d/%m/%Y"),
-            time=record.date_time.strftime("%H:%M:%S"),
+            date=record.date_time.strftime(self.date_format),
+            time=record.date_time.strftime(self.time_format),
             datetime=record.date_time,
             module=record.module,
             function=record.function,

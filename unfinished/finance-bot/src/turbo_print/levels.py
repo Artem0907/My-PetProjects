@@ -29,9 +29,7 @@ def register_level(name: str, level: int, color: str | None = None) -> None:
     setattr(LogLevels, clean_name, LogLevelStructure(clean_name, level, color))
 
 
-def get_all_levels(
-    remove_duplicates: bool = False,
-) -> dict[str, LogLevelStructure]:
+def get_all_levels() -> dict[str, LogLevelStructure]:
     levels = {
         k: v
         for k, v in LogLevels.__dict__.items()
@@ -39,9 +37,6 @@ def get_all_levels(
         and not k.endswith(("_", "__"))
         and isinstance(v, LogLevelStructure)
     }
-
-    if not remove_duplicates:
-        return levels
 
     seen_values = set()
     unique_levels = {}

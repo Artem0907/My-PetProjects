@@ -13,6 +13,7 @@ from .record import LogRecord
 
 class _TurboLoggerMethods:
     _context: dict[str, Any]
+    _global_context: dict[str, Any]
     _filters: list[BaseFilter]
     _formatter: BaseFormatter
     _handlers: list[BaseHandler]
@@ -32,6 +33,9 @@ class _TurboLoggerMethods:
     def get_handlers(self) -> list[BaseHandler]:
         return self._handlers.copy()
 
+    def reset_handlers(self) -> None:
+        self._handlers.clear()
+
     def add_filter(self, filter: BaseFilter) -> None:
         self._filters.append(filter)
 
@@ -41,6 +45,9 @@ class _TurboLoggerMethods:
     def get_filters(self) -> list[BaseFilter]:
         return self._filters.copy()
 
+    def reset_filters(self) -> None:
+        self._filters.clear()
+
     def add_middleware(self, middleware: BaseMiddleware) -> None:
         self._middlewares.append(middleware)
 
@@ -49,6 +56,9 @@ class _TurboLoggerMethods:
 
     def get_middlewares(self) -> list[BaseMiddleware]:
         return self._middlewares.copy()
+
+    def reset_middlewares(self) -> None:
+        self._middlewares.clear()
 
     def set_formatter(self, formatter: BaseFormatter) -> None:
         self._formatter = formatter
@@ -61,6 +71,28 @@ class _TurboLoggerMethods:
 
     def get_level(self) -> LogLevelStructure:
         return self._level
+
+    def add_global_context(self, **context: Any) -> None:
+        self._global_context.update(**context)
+
+    def remove_global_context(self, context_name: str) -> None:
+        del self._global_context[context_name]
+
+    @overload
+    def get_global_context(self, context_name: str) -> Any: ...
+
+    @overload
+    def get_global_context(self) -> dict[str, Any]: ...
+
+    def get_global_context(
+        self, context_name: str | None = None
+    ) -> dict[str, Any] | Any:
+        if context_name:
+            return self._global_context.get(context_name)
+        return self._global_context.copy()
+
+    def reset_global_context(self) -> None:
+        self._global_context.clear()
 
     def add_context(self, **context: Any) -> None:
         self._context.update(**context)
@@ -81,13 +113,16 @@ class _TurboLoggerMethods:
             return self._context.get(context_name)
         return self._context.copy()
 
+    def reset_context(self) -> None:
+        self._context.clear()
+
 
 class TurboLogger(_TurboLoggerMethods):
     root_logger: ContextVar["TurboLogger"] = ContextVar(
         "TurboPrint_root_logger", default=None  # type: ignore[arg-type]
     )  # pyright: ignore[reportAssignmentType]
     _loggers: dict[str, "TurboLogger"] = {}
-    _context: dict[str, Any] = {}
+    _global_context: dict[str, Any] = {}
 
     @classmethod
     def get_all_loggers(cls) -> dict[str, "TurboLogger"]:
@@ -115,6 +150,7 @@ class TurboLogger(_TurboLoggerMethods):
         handlers: list[BaseHandler] | None = None,
         filters: list[BaseFilter] | None = None,
         middlewares: list[BaseMiddleware] | None = None,
+        context: dict[str, Any] | None = None,
         inheritance: bool = True,
         propagate: bool = True,
     ):
@@ -150,6 +186,7 @@ class TurboLogger(_TurboLoggerMethods):
             self._formatter: BaseFormatter = (
                 formatter or self.parent.get_formatter()
             )
+            self._context: dict[str, Any] = context or self.parent.get_context()
             self._propagate: bool = propagate
         else:
             self._name = name
@@ -158,6 +195,7 @@ class TurboLogger(_TurboLoggerMethods):
             self._filters: list[BaseFilter] = filters or []  # type: ignore[no-redef]
             self._middlewares: list[BaseMiddleware] = middlewares or []  # type: ignore[no-redef]
             self._formatter: BaseFormatter = formatter or SimpleFormatter()  # type: ignore[no-redef]
+            self._context: dict[str, Any] = context or {}  # type: ignore[no-redef]
             self._propagate: bool = propagate  # type: ignore[no-redef]
 
     async def log(
@@ -186,9 +224,13 @@ class TurboLogger(_TurboLoggerMethods):
         ]
 
         if level.level >= self._level.level and all(filters):
-            for handler in self.get_handlers():
+            try:
                 for middleware in self.get_middlewares():
                     await middleware.pre_process(record)
-                await handler.handle(record)
+                for handler in self.get_handlers():
+                    await handler.handle(record)
                 for middleware in reversed(self.get_middlewares()):
                     await middleware.post_process(record)
+            except Exception as exception:
+                for middleware in reversed(self.get_middlewares()):
+                    await middleware.error_process(exception, record)
