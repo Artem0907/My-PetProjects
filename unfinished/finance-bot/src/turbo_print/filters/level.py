@@ -32,11 +32,11 @@ class LevelFilter(BaseFilter):
             if levels.startswith("+"):
                 level = get_all_levels().get(levels[1:])
                 if level:
-                    levels_list = all_levels[all_levels.index(level) :]
+                    levels_list = all_levels[: all_levels.index(level)]
             elif levels.endswith("+"):
                 level = get_all_levels().get(levels[:-1])
                 if level:
-                    levels_list = all_levels[: all_levels.index(level)]
+                    levels_list = all_levels[all_levels.index(level) :]
             else:
                 level = get_all_levels().get(levels, None)
                 levels_list = [level] if level else None
